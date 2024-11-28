@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="all pt-5 container">
+      <div class="text-center mb-5">
+        <h1 class="d-inline pb-4">Bookmarker</h1>
+      </div>
+      <p class="m-auto text-center mb-3 dots">
+        ..................................................................................................................................................................................................................................................................................................................................................................................
+      </p>
+      <div class="text-center mb-4">
+        <h2 class="right fs-4 m-auto">
+          <i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark ms-1"></i>
+        </h2>
+      </div>
+      <div class="input ms-5 mb-4">
+        <label for="site-name" class="fs-6 pt-cap fw-bold d-block"
+          ><i class="fa-solid fa-book-bookmark me-2 mb-3"></i> Site Name
+        </label>
+        <input
+          type="text"
+          id="site_name"
+          name="Site_Name"
+          placeholder="Bookmark Name"
+          class="form-control"
+          oninput="validateInput(this)"
+        />
+      </div>
+      <div class="input ms-5 mb-4">
+        <label for="site-url" class="fs-6 pt-cap fw-bold d-block"
+          ><i class="fa-solid fa-link me-2 mb-3"></i> Site URL
+        </label>
+        <input
+          type="text"
+          id="site_url"
+          name="Site_URL"
+          placeholder="Webite URL"
+          class="form-control"
+          oninput="validateInput(this)"
+        />
+      </div>
+      <div class="text-center mb-2">
+        <button class="btn btn-submit px-5 pt-caption" onclick="addSite()">
+          Submit
+        </button>
+      </div>
+      <p class="m-auto text-center mb-3 dots">
+        ..................................................................................................................................................................................................................................................................................................................................................................................
+      </p>
+
+      <div class="table-responsive pt-caption color-black">
+        <table class="table table-light">
+          <thead>
+            <tr class="text-center">
+              <th scope="col">Index</th>
+              <th scope="col">Website Name</th>
+              <th scope="col">Visit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody class="table-content" id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

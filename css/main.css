@@ -1,0 +1,71 @@
+body{
+  background-color: #F7ECDE;
+}
+*::selection{
+  background-color: #FEC260;
+  color: black;
+}
+@font-face {
+  font-family: pacifico;
+  src: url(../fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: righteous;
+  src: url(../fonts/Righteous-Regular.ttf);
+}
+@font-face {
+  font-family: pt-cap;
+  src: url(../fonts/PTSansCaption-Regular.ttf);
+}
+.pt-caption{
+  font-family: pt-cap;
+}
+.color-black{
+  color: #352E28;
+}
+.right{
+  font-family: righteous;
+}
+h1{
+  font-family: pacifico;
+  font-size: 55px;
+  position: relative;
+}
+h1::before{
+  content: "";
+  background-color: #FEC260;
+  position: absolute;
+  width: 100%;
+  height: 27%;
+  z-index: -1;
+  top: 48%;
+  transition: all 0.25s ease-in-out;
+}
+h1:hover::before{
+  height: 45%;
+  top: 30% !important;
+}
+h2{
+  display: inline;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+}
+.form-control:focus{
+  border-color: #FEC260;
+  box-shadow: 0 0 0 0.25rem rgba(254, 194, 96, 0.5);
+}
+.vert-align-middle{
+  vertical-align: middle;
+}
+.btn-submit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #a03315;
+}
+.dots {
+  pointer-events: none;
+}
